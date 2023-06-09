@@ -1,0 +1,127 @@
+{% extends 'base.html'  %}
+
+{% block title %} home - extract {% endblock title %}
+
+
+{% block content %}
+
+
+
+<div class="row">
+	<div class='col-sm-1'>
+	</div>
+	<div class='col-sm-7 mt-1'>
+			<img src="http://placehold.it/400x100">
+			<!-- Webtxtract -->
+			<div class='col-sm-8'>
+				<h5 class='mt-1'>dummy name</h5>
+				<ul class='list-unstyled'>
+					<li>
+					  <p style='font-size: 16px;'>Dummy_name is free online tool to extract visible text from webpages</p>
+					</li>
+					<li>
+					  <p style='font-size: 16px;'>You can seach paragraphs by using keywords for precise search</p>
+					</li>
+					<li>
+					  <p style='font-size: 16px;'>Download your text file to get the restuls found</p>
+					</li>
+				</ul>
+			</div>
+	</div>
+	<div class='col-sm-3 mt-1'>
+		<img src="http://placehold.it/290x230">
+	</div>
+	<div class='col-sm-1'>
+	</div>
+</div>
+
+<div class="row mt-1">
+	<div class='col-sm-1'>
+	</div>
+	<div class='col-sm-10'>
+		<div class="card bg-light text-center" >
+		  <div class="card-body">
+		    <h2 class="card-title" style="color: #004483;
+		     font-family: serif; font-weight: 500">Web Page Extract</h2>
+		    <div class='card-text'>
+		    	<h5 style="font-family: serif;">Past link of the page to be processed</h5>
+		    </div>
+			    <form method='post' id='myform1'>
+			    	    {% csrf_token %}
+					    <div class="col-sm-8 offset-2">
+					      <div class="input-group">
+							  <input type="text" class="form-control"  name="link" placeholder="Enter the page address here.." aria-label="Recipient's username" aria-describedby="button-addon2">
+					  <button class="btn btn-primary" type="button" id="button-addon2">extract</button>
+						  </div>
+                          </div>	    
+			    </form>
+
+			    <div class="col-sm-8 mt-3">
+				    <p class='text-muted mb-1'
+				     style="text-align: left;
+				            margin-left: 177px;
+				            font-weight: bold;
+				            ">
+				      add keyword for specific search and tape enter:
+				    </p>
+					<div class='container-tag-search' style="margin-left: 175px;">
+						<div class='my-container-tag' >
+							<input />
+					    </div>
+					</div>
+			    </div>
+
+			    <div class="col-sm-6 offset-3 mt-2">
+	        	{% if message != '' %}
+	        		 {% if file_id == ''  %}
+	        		    <p class="text-danger" >
+	                 		{{ message }}
+	        			</p>
+	                 {% else %}
+	                   <div >
+		                    <div class="text-success">
+		                 		<p>{{ message }}</p><a href="/scp/{{file_id}}"> <button type="button" class="btn btn-primary">Download</button></a>
+		        			</div>
+	        			</div>
+	                 	<!-- <a href="/scp/{{file_id}}">Down Here file id: {{file_id}} </a> -->
+	                 {% endif %}
+	        	{% else %}
+	        		<!-- div p removed -->
+	        	{% endif %}
+	          </div>
+	     <!-- Ads -->
+		  <!--   <div class='mt-2'>
+		     	<img src="http://placehold.it/800x90">
+		    </div> -->
+        </div>
+	</div>
+  </div>
+	<div class='col-sm-1'>
+	</div>
+</div>
+<div class="row mt-2">
+	<div class='col-sm-8 offset-2'>
+		 <!-- Ads -->
+		    <div class='mt-1'>
+		     	<img src="http://placehold.it/850x110">
+		    </div>
+	</div>
+</div>
+<div class="row mt-5 mb-5">
+	<div class='col-sm-2 offset-1'>
+		 <!-- Ads -->
+		    <div class='mt-1'>
+		     	<img src="http://placehold.it/300x240">
+		    </div>
+	</div>
+	<div class='col-sm-2 offset-5'>
+		 <!-- Ads -->
+		    <div class='mt-2'>
+		     	<img src="http://placehold.it/300x240">
+		    </div>
+	</div>
+	
+</div>
+
+{% endblock content %}
+

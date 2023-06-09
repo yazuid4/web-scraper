@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/mystyle.css' %}"  rel="stylesheet">
+
+</head>
+<body>
+	<div class="container-fluid">
+		 <div class='row'>
+         	  {% block content %} Override this block {% endblock %}
+        </div>
+	</div>
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.5.1.slim.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/myscript.js' %}"></script>
+
+
+ 
+</body>
+
+
+
+<footer class="text-center text-lg-start col-sm-10 offset-1">
+  <!-- Grid container -->
+  <div class='bg-light'>
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-sm-8 offset-2 mb-4 mb-md-0">
+        <h5 class="text-uppercase text-center">Footer text</h5>
+
+        <p class='text-center'>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+          aliquam voluptatem veniam, est atque cumque eum delectus sint!
+        </p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+     <!--  <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Footer text</h5>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+          aliquam voluptatem veniam, est atque cumque eum delectus sint!
+        </p>
+      </div> -->
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+  </div>
+  <!-- Copyright -->
+  <div class="bg-dark text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    ©2021 Copyright:
+    <a class="text-dark" href="https://webtxt.com/">dummy_name.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</html>
